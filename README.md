@@ -25,7 +25,7 @@ npm install
 # Run the a single test...
 npx playwright test register.spec.ts
 
-# ...or run all the a tests (android test will fail if your mobile is not connected)
+# ...or run all the tests (android test will fail if your mobile is not connected)
 npx playwright test
 
 #Once was finished you can see the report
