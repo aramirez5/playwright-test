@@ -4,9 +4,13 @@
 
 ## What is playwright-test ?
 
-<b>playwright-test</b> is a project that served as a technical test for a job interview.
+<b>playwright-test</b> is a project that contains tests made with the Playwright framework
 
-I used Playwright framework to do the challenge, which consists in a E2E test that enter in a web page and sign in it.
+At this moment I have three tests:
+
+1. A test for a job interview which consists in enter in a web page and sign in it.
+2. A test that login and assert some elements
+3. A test in an Android device
 
 ## Building and installation
 
@@ -18,8 +22,11 @@ Once Node installed, just follow the next steps:
 # Install Playwright and dependencies
 npm install
 
-# Run the test
+# Run the a single test...
 npx playwright test register.spec.ts
+
+# ...or run all the a tests (android test will fail if your mobile is not connected)
+npx playwright test
 
 #Once was finished you can see the report
 npx playwright show-report
@@ -42,3 +49,10 @@ npx @playwright/test --version
 # Download the new browsers
 npx playwright install
 ```
+
+## Android test
+
+In the current version of Playwright (1.31.2), the Android automation is <b>experimental</b> which means that maybe you will not be able to run the test correctly.
+
+See [playwright.dev/docs/api/class-android](https://playwright.dev/docs/api/class-android) for more information and the requirements you have to follow.
+
